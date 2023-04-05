@@ -1,4 +1,4 @@
-import Searchbar from "../components/Searchbar";
+import Searchbar from "../features/search/Searchbar";
 import githubMark from "../assets/github-mark.svg";
 import githubMarkWhite from "../assets/github-mark-white.svg";
 import { useSelector } from "react-redux";
@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 function Home() {
   const darkMode = useSelector((state) => state.theme.darkMode);
   return (
-    <section className="bg-gray-50 dark:bg-gray-800 px-3 flex flex-col gap-10">
+    <section className="bg-gray-50 dark:bg-gray-800  flex flex-col gap-10">
       <div>
         <div className="grid place-items-center">
           <img

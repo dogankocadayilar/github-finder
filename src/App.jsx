@@ -11,13 +11,15 @@ function App() {
     <main
       className={`${
         darkMode ? "dark bg-gray-800" : "bg-gray-50"
-      } outline h-screen`}
+      }  min-h-screen `}
     >
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/user" element={<User />} />
-      </Routes>
+      <div className="flex flex-col items-center  p-5">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/user" element={<User />} />
+        </Routes>
+      </div>
     </main>
   );
 }

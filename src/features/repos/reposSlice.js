@@ -26,12 +26,12 @@ const reposSlice = createSlice({
     });
     builder.addCase(fetchRepos.fulfilled, (state, action) => {
       state.loading = false;
-      state.user = action.payload;
+      state.repos = action.payload;
       state.error = "";
     });
     builder.addCase(fetchRepos.rejected, (state, action) => {
       state.loading = false;
-      state.user = null;
+      state.repos = null;
       state.error = action.error.message;
     });
   },

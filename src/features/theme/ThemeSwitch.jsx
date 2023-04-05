@@ -1,7 +1,7 @@
 import { SunIcon } from "@heroicons/react/24/solid";
 import { MoonIcon } from "@heroicons/react/24/solid";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleTheme } from "../features/theme/themeSlice";
+import { toggleTheme } from "./themeSlice";
 
 function ThemeSwitch() {
   const darkMode = useSelector((state) => state.theme.darkMode);

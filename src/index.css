@@ -5,7 +5,7 @@
 .theme-switch {
   @apply bg-gray-500 dark:bg-gray-300;
   width: 50px;
-  height: 28px;
+  height: 25px;
   position: relative;
   display: flex;
   border-radius: 20px;
@@ -22,15 +22,19 @@
 
 .checkbox:checked ~ .switcher {
   transform: translateX(100%);
+  background-image: url("./assets/github-mark.svg");
 }
 
 .switcher {
   position: absolute;
+  background-image: url("./assets/github-mark-white.svg");
+  background-position: center;
+  background-size: cover;
   left: 0;
   width: 25px;
   border-radius: 50%;
   aspect-ratio: 1;
-  @apply bg-gray-700 dark:bg-gray-500 outline outline-white outline-1 dark:outline-gray-100;
+  @apply bg-transparent;
   transition: 200ms;
   will-change: transform;
 }
