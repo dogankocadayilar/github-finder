@@ -1,6 +1,7 @@
 import { UsersIcon } from "@heroicons/react/24/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRepos } from "../repos/reposSlice";
+import Loading from "../../components/Loading";
 
 function UserCard() {
   const users = useSelector((state) => state.users);
@@ -9,7 +10,7 @@ function UserCard() {
 
   return (
     <div className="text-gray-700 dark:text-gray-300 max-w-[500px]">
-      {users.loading && <div>Loading...</div>}
+      {users.loading && <Loading />}
       {!users.loading && users.error != "" && (
         <div className="text-red-500 font-semibold">{users.error}</div>
       )}

@@ -1,11 +1,12 @@
 import { useSelector } from "react-redux";
 import RepoCard from "../../components/RepoCard";
+import Loading from "../../components/Loading";
 
 function RepoList() {
   const repos = useSelector((state) => state.repos);
   return (
     <div className="dark:text-gray-300">
-      {repos.loading && <div>Loading...</div>}
+      {repos.loading && <Loading />}
       {!repos.loading && repos.error != "" && <div>{repos.error}</div>}
       {!repos.loading && repos.error == "" && repos.repos?.length == 0 && (
         <div className="text-xl font-bold">
