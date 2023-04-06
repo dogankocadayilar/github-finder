@@ -20,7 +20,7 @@ You can search users with usernames, see some information about user repositorie
 - Flexbox
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Redux Toolkit](https://reactjs.org/) - State Manager
+- [Redux Toolkit](https://redux-toolkit.js.org/) - State Manager
 
 ## Author
 
