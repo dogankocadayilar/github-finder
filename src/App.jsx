@@ -14,7 +14,7 @@ function App() {
       }  min-h-screen `}
     >
       <Navbar />
-      <div className="flex flex-col items-center  p-5">
+      <div className="flex flex-col items-center p-5">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/user" element={<User />} />

@@ -1,7 +1,3 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchRepos } from "../features/repos/reposSlice";
 import UserCard from "../features/users/UserCard";
 import RepoList from "../features/repos/RepoList";
 

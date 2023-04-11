@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 function Home() {
   const darkMode = useSelector((state) => state.theme.darkMode);
+
   return (
     <section className="bg-gray-50 dark:bg-gray-800  flex flex-col gap-10">
       <div>

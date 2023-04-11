@@ -1,7 +1,7 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearch } from "./searchSlice";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { fetchUsers } from "../users/usersSlice";
 
 function Searchbar() {
@@ -11,9 +11,10 @@ function Searchbar() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (searchValue.trim() === "") return;
-    dispatch(fetchUsers(searchValue.trim()));
-    navigate("/user");
+    const searchTerm = searchValue.trim();
+    if (searchTerm === "") return;
+    dispatch(fetchUsers(searchTerm));
+    navigate(`/user`);
   }
 
   return (

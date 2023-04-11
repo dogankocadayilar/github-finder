@@ -1,6 +1,6 @@
 import ThemeSwitch from "../features/theme/ThemeSwitch";
-import reactLogo from "../../public/react.svg";
-import viteLogo from "../../public/vite.svg";
+import reactLogo from "../assets/react.svg";
+import viteLogo from "../assets/vite.svg";
 import githubMark from "../assets/github-mark.svg";
 import githubMarkWhite from "../assets/github-mark-white.svg";
 import { Link } from "react-router-dom";

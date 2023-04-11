@@ -11,4 +11,25 @@ export const store = configureStore({
     repos: reposSliceReducer,
     theme: themeSliceReducer,
   },
+  preloadedState: loadState(),
 });
+
+store.subscribe((listener) => {
+  const { users, theme } = store.getState();
+  saveState({ users, theme });
+});
+
+function saveState(state) {
+  try {
+    let serializedState = JSON.stringify(state);
+    localStorage.setItem("github-finder:state", serializedState);
+  } catch (err) {}
+}
+
+function loadState() {
+  try {
+    let serializedState = localStorage.getItem("github-finder:state") || {};
+
+    return JSON.parse(serializedState);
+  } catch (err) {}
+}
